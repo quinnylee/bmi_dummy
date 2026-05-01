@@ -1,0 +1,4 @@
+.venv/
+bmi_dummy/__pycache__/
+bmi_dummy.egg-info/
+.DS_Store
