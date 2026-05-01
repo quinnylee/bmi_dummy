@@ -2,6 +2,8 @@
 
 A no-op [Basic Model Interface (BMI)](https://bmi.readthedocs.io/) model for use with [NextGen / NGIAB](https://github.com/CIROH-UA). It accepts any input variables and always returns `0.0` for every output at every time step.
 
+Authored by Claude.
+
 ## Install
 
 ```bash
