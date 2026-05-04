@@ -35,8 +35,8 @@ class BmiDummy:
         self._start_time: float = 0.0
         self._end_time: float = 86400.0
         self._time_step: float = 3600.0
-        self._input_var_names: list[str] = ["input"]
-        self._output_var_names: list[str] = ["output"]
+        self._input_var_names: list[str] = []
+        self._output_var_names: list[str] = ["z"]
 
         if config_file:
             try:
