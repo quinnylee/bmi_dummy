@@ -82,6 +82,12 @@ class BmiDummy:
     def get_component_name(self) -> str:
         return "Dummy BMI Model"
 
+    def get_input_item_count(self) -> int:
+        return len(self._input_var_names)
+
+    def get_output_item_count(self) -> int:
+        return len(self._output_var_names)
+
     # ------------------------------------------------------------------ #
     #  Time                                                                #
     # ------------------------------------------------------------------ #
@@ -162,6 +168,36 @@ class BmiDummy:
 
     def get_grid_node_count(self, grid: int) -> int:
         return 1
+
+    def get_grid_edge_count(self, grid: int) -> int:
+        return 0
+
+    def get_grid_face_count(self, grid: int) -> int:
+        return 0
+
+    def get_grid_x(self, grid: int, x: np.ndarray) -> np.ndarray:
+        x[:] = [0.0]
+        return x
+
+    def get_grid_y(self, grid: int, y: np.ndarray) -> np.ndarray:
+        y[:] = [0.0]
+        return y
+
+    def get_grid_z(self, grid: int, z: np.ndarray) -> np.ndarray:
+        z[:] = [0.0]
+        return z
+
+    def get_grid_edge_nodes(self, grid: int, edge_nodes: np.ndarray) -> np.ndarray:
+        return edge_nodes  # no edges on a scalar grid
+
+    def get_grid_face_edges(self, grid: int, face_edges: np.ndarray) -> np.ndarray:
+        return face_edges  # no faces on a scalar grid
+
+    def get_grid_face_nodes(self, grid: int, face_nodes: np.ndarray) -> np.ndarray:
+        return face_nodes  # no faces on a scalar grid
+
+    def get_grid_nodes_per_face(self, grid: int, nodes_per_face: np.ndarray) -> np.ndarray:
+        return nodes_per_face  # no faces on a scalar grid
 
     # ------------------------------------------------------------------ #
     #  Getters / Setters                                                   #
