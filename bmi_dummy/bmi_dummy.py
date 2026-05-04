@@ -23,11 +23,11 @@ class BmiDummy:
         Initialize the model from an optional YAML config file.
 
         The config file may define:
-          - start_time   (float, default 0.0)
-          - end_time     (float, default 86400.0  — one day in seconds)
-          - time_step    (float, default 3600.0   — one hour in seconds)
-          - input_vars   (list of str, default ["input"])
-          - output_vars  (list of str, default ["output"])
+            - start_time   (float, default 0.0)
+            - end_time     (float, default 86400.0  — one day in seconds)
+            - time_step    (float, default 3600.0   — one hour in seconds)
+            - input_vars   (list of str, default ["input"])
+            - output_vars  (list of str, default ["output"])
 
         All values can also be omitted; defaults are used in that case.
         """
@@ -223,9 +223,7 @@ if __name__ == "__main__":
         model.update()
 
         model.get_value("output", dest)
-        print(
-            f"  t={model.get_current_time():8.1f} s  |  output = {dest[0]}"
-        )
+        print(f"  t={model.get_current_time():8.1f} s  |  output = {dest[0]}")
 
     model.finalize()
     print("\nDone.")
